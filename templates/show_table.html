@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Год</th>
+        <th>Квартал</th>
+        <th>Значение</th>
+    </tr>
+    {% for r in table['Cells']['IndexValues'] %}
+    <!-- {'Quarter': 'I квартал', 'Value': 85.2, 'Year': 2009} -->
+    <tr>
+        <td>
+            {{ r['Year'] }}
+        </td>
+        <td>
+            {{ r['Quarter'] }}
+        </td>
+        <td>
+            {{ r['Value'] }}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
